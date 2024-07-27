@@ -1,6 +1,7 @@
 import { Engine } from "excalibur";
 import { Player } from "./player";
 import { loader } from "./resources";
+import { Player2 } from "./player2";
 
 class Game extends Engine {
     constructor() {
@@ -8,7 +9,9 @@ class Game extends Engine {
     }
     initialize() {
       const player = new Player();
+      const player2 = new Player2();
       this.add(player);
+      this.add(player2);
 
       this.start(loader);
     }
